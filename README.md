@@ -18,20 +18,16 @@ First released on November 14, 2013, Dart is an object-oriented, class-based, ga
 ### Getting Started
 **Useful Tutorials:**
 
-- [Tutorials from Dart](https://dart.dev/tutorials)
-
-- [FreeCodeCamp](https://youtu.be/Ej_Pcr4uC2Q)
-
-- [javaTpoint](https://www.javatpoint.com/dart-programming)
-
-- [GeeksforGeeks](https://www.geeksforgeeks.org/dart-tutorial)
+- [Tutorials from Dart](https://dart.dev/tutorials) \
+- [FreeCodeCamp](https://youtu.be/Ej_Pcr4uC2Q) \
+- [javaTpoint](https://www.javatpoint.com/dart-programming) \
+- [GeeksforGeeks](https://www.geeksforgeeks.org/dart-tutorial) \
 
 **"Hello World" Program**
 
 
 ## References
 
-[1] https://dart.dev/
-
-[2] https://en.wikipedia.org/w/index.php?title=Dart_(programming_language)&oldid=1174763841
+[1] https://dart.dev/ \
+[2] https://en.wikipedia.org/w/index.php?title=Dart_(programming_language)&oldid=1174763841 \
 
