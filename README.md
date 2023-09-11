@@ -16,14 +16,15 @@ First released on November 14, 2013, Dart is an object-oriented, class-based, ga
 **Linux**
 
 ### Getting Started
-**Useful Tutorials**
-Tutorials from Dart - https://dart.dev/tutorials
+**Useful Tutorials:**
 
-FreeCodeCamp - https://youtu.be/Ej_Pcr4uC2Q
+- [Tutorials from Dart](https://dart.dev/tutorials)
 
-javaTpoint - https://www.javatpoint.com/dart-programming
+- [FreeCodeCamp](https://youtu.be/Ej_Pcr4uC2Q)
 
-GeeksforGeeks - https://www.geeksforgeeks.org/dart-tutoria
+- [javaTpoint](https://www.javatpoint.com/dart-programming)
+
+- [GeeksforGeeks](https://www.geeksforgeeks.org/dart-tutorial)
 
 **"Hello World" Program**
 
