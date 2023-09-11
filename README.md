@@ -3,7 +3,12 @@ This repository serves as a guide to learning Dart, curated over the course of C
 
 Author: Laura Wysocki
 ## Language Overview and Setup
+Dart is a compiled, open-source, general-purpose programming language primarily used for web and mobile app development.
 
 ### History
-
+First released on November 14, 2013, Dart is an object-oriented, class-based, garbage-collected programming language designed by Lars Bak and Kasper Lund and developed by Google. With a syntax similar to languages like JavaScript, Java, and C++, Dart was created to address the limitations Google found with JavaScript. Dart is most notably known for its web development capabilities and  Flutter framework, which allows for building cross-platform mobile applications.
 ### Installation
+
+## References
+[1] https://en.wikipedia.org/w/index.php?title=Dart_(programming_language)&oldid=1174763841
+[2] https://dart.dev/
