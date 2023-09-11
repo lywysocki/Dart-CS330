@@ -30,5 +30,8 @@ First released on November 14, 2013, Dart is an object-oriented, class-based, ga
 
 
 ## References
-[1] https://en.wikipedia.org/w/index.php?title=Dart_(programming_language)&oldid=1174763841
-[2] https://dart.dev/
+
+[1] https://dart.dev/
+
+[2] https://en.wikipedia.org/w/index.php?title=Dart_(programming_language)&oldid=1174763841
+
