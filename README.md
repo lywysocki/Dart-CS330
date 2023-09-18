@@ -9,11 +9,26 @@ Dart is a compiled, open-source, general-purpose programming language primarily 
 First released on November 14, 2013, Dart is an object-oriented, class-based, garbage-collected programming language designed by Lars Bak and Kasper Lund and developed by Google. With a syntax similar to languages like JavaScript, Java, and C++, Dart was created to address the limitations Google found with JavaScript. Dart is most notably known for its web development capabilities and  Flutter framework, which allows for building cross-platform mobile applications.
 
 ### Installation
+Dart is supported on Windows, MacOS, and Linux.
 **Windows**
+The Dart SDK can be downloaded on Windows devices via [Chocolatey](https://chocolatey.org/). \
+
+>[!IMPORTANT]
+> Commands must be executed with administrator rights.
+1. To install the Dart SDK:
+```
+C:\> choco install dart-sdk
+```
+2. To upgrade the Dart SDK:
+```
+C:\> choco upgrade dart-sdk
+```
 
 **MacOS**
+Directions on getting the Dart SDK on MacOS can be found [here](https://dart.dev/get-dart#install) 
 
 **Linux**
+Directions on getting the Dart SDK on Linux can be found [here](https://dart.dev/get-dart#install)
 
 ### Getting Started
 **Useful Tutorials:**
