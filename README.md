@@ -10,8 +10,9 @@ First released on November 14, 2013, Dart is an object-oriented, class-based, ga
 
 ### Installation
 Dart is supported on Windows, MacOS, and Linux.
+
 **Windows**
-The Dart SDK can be downloaded on Windows devices via [Chocolatey](https://chocolatey.org/). \
+The Dart SDK can be downloaded on Windows devices via [Chocolatey](https://chocolatey.org/).
 
 >[!IMPORTANT]
 > Commands must be executed with administrator rights.
