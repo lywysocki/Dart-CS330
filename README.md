@@ -44,6 +44,7 @@ Dart can be written in any text editor; however, IDEs like [VS Code](https://cod
 
 #### "Hello World" Program
 In order to display "Hello World!" to the console, a top-level `main()` function is needed--and required by every app. The top-level `print()` function can be used to display text on the console. Dart requires every statement to be ended with a semicolon(`;`)--a statement terminator.  
+  
 The following can be written to display "Hello World!" to your console:
 ```
 void main() {
@@ -53,6 +54,7 @@ void main() {
 #### Comments in Dart
 ##### Single-line comments
 Single-line comments in Dart begin with `//`  
+  
 Example:
 ```
 void main() {
@@ -62,6 +64,7 @@ void main() {
 ```
 ##### Multi-line comments
 Mult-line comments in Dart begin with `/*` and end with `*/`  
+  
 Example:
 ```
 /*
