@@ -11,7 +11,7 @@ First released on November 14, 2013, Dart is an object-oriented, class-based, ga
 ### Installation
 Dart is supported on Windows, MacOS, and Linux.
 
-**Windows**
+#### Windows
 The Dart SDK can be downloaded on Windows devices via [Chocolatey](https://chocolatey.org/).
 
 >[!IMPORTANT]
@@ -25,21 +25,21 @@ C:\> choco install dart-sdk
 C:\> choco upgrade dart-sdk
 ```
 
-**MacOS**
+#### MacOS
 Directions on getting the Dart SDK on MacOS can be found [here](https://dart.dev/get-dart#install) 
 
-**Linux**
+#### Linux
 Directions on getting the Dart SDK on Linux can be found [here](https://dart.dev/get-dart#install)
 
 ### Getting Started
-**Useful Tutorials:**
+#### Useful Tutorials:
 
 - [Tutorials from Dart](https://dart.dev/tutorials)
 - [FreeCodeCamp](https://youtu.be/Ej_Pcr4uC2Q)
 - [javaTpoint](https://www.javatpoint.com/dart-programming)
 - [GeeksforGeeks](https://www.geeksforgeeks.org/dart-tutorial)
 
-**"Hello World" Program**
+#### "Hello World" Program
 
 
 ## References
