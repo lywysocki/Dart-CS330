@@ -32,7 +32,7 @@ Directions on getting the Dart SDK on MacOS can be found [here](https://dart.dev
 Directions on getting the Dart SDK on Linux can be found [here](https://dart.dev/get-dart#install)
 
 #### Text Editor/IDE
-Dart can be written in any text editor; however, IDEs like VS Code, Android Studio, and IntelliJ IDEA can enhance the coding experience. Once an IDE is installed, ensure you download any relevant Dart extensions or plugins. Personally, I will be using IntelliJ IDEA; for IntelliJ IDEA, a Dart plugin is needed to run Dart projects.  
+Dart can be written in any text editor; however, IDEs like [VS Code](https://code.visualstudio.com/), [Android Studio](https://developer.android.com/studio), and [IntelliJ IDEA](https://www.jetbrains.com/idea/download) can enhance the coding experience. Once an IDE is installed, ensure you download any relevant Dart extensions or plugins. Personally, I will be using IntelliJ IDEA; for IntelliJ IDEA, a Dart plugin is needed to run Dart projects.  
 
 ### Getting Started
 #### Useful Tutorials:
