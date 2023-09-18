@@ -9,7 +9,7 @@ Dart is a compiled, open-source, general-purpose programming language primarily 
 First released on November 14, 2013, Dart is an object-oriented, class-based, garbage-collected programming language designed by Lars Bak and Kasper Lund and developed by Google. With a syntax similar to languages like JavaScript, Java, and C++, Dart was created to address the limitations Google found with JavaScript. Dart is most notably known for its web development capabilities and  Flutter framework, which allows for building cross-platform mobile applications.
 
 ### Installation
-Dart is supported on Windows, MacOS, and Linux. Dart can be written in any text editor; however, IDEs like VS Code, Android Studio, and IntelliJ IDEA can enhance the coding experience. Once an IDE is installed, ensure you download any relevant Dart extensions or plugins. Personally, I will be using IntelliJ IDEA; for IntelliJ IDEA, a Dart plugin is needed to run Dart projects.
+Dart is supported on Windows, MacOS, and Linux.
 
 #### Windows
 The Dart SDK can be downloaded on Windows devices via [Chocolatey](https://chocolatey.org/).
@@ -31,6 +31,9 @@ Directions on getting the Dart SDK on MacOS can be found [here](https://dart.dev
 #### Linux
 Directions on getting the Dart SDK on Linux can be found [here](https://dart.dev/get-dart#install)
 
+#### Text Editor/IDE
+Dart can be written in any text editor; however, IDEs like VS Code, Android Studio, and IntelliJ IDEA can enhance the coding experience. Once an IDE is installed, ensure you download any relevant Dart extensions or plugins. Personally, I will be using IntelliJ IDEA; for IntelliJ IDEA, a Dart plugin is needed to run Dart projects.  
+
 ### Getting Started
 #### Useful Tutorials:
 
@@ -40,7 +43,8 @@ Directions on getting the Dart SDK on Linux can be found [here](https://dart.dev
 - [GeeksforGeeks](https://www.geeksforgeeks.org/dart-tutorial)
 
 #### "Hello World" Program
-In order to display "Hello World!" to the console, a top-level `main()` function is needed--and required by every app. The top-level `print()` function can be used to display text on the console. Dart requires every statement to be ended with a semicolon(;)--a statement terminator. 
+In order to display "Hello World!" to the console, a top-level `main()` function is needed--and required by every app. The top-level `print()` function can be used to display text on the console. Dart requires every statement to be ended with a semicolon(`;`)--a statement terminator.  
+The following can be written to display "Hello World!" to your console:
 ```
 void main() {
   print('Hello World!');
@@ -48,7 +52,7 @@ void main() {
 ```
 #### Comments in Dart
 ##### Single-line comments
-Single-line comments in Dart begin with `//`
+Single-line comments in Dart begin with `//`  
 Example:
 ```
 void main() {
@@ -57,13 +61,12 @@ void main() {
 }
 ```
 ##### Multi-line comments
-Mult-line comments in Dart begin with `/*` and end with `*/`
-
+Mult-line comments in Dart begin with `/*` and end with `*/`  
+Example:
 ```
 /*
  * A program that displays "Hello World!" to the console
  @retuns void
-
 */
 void main() {
   print('Hello World!');
@@ -73,6 +76,6 @@ void main() {
 ## References
 
 [1] https://dart.dev/ \
-[2] https://en.wikipedia.org/w/index.php?title=Dart_(programming_language)&oldid=1174763841
+[2] https://en.wikipedia.org/w/index.php?title=Dart_(programming_language)&oldid=1174763841 \
 [3] https://www.jetbrains.com/help/idea/dart.html
 
