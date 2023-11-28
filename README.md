@@ -52,7 +52,8 @@ The following can be written to display "Hello World!" to your console:
 void main() {
   print('Hello World!');
 }
-```
+```  
+*A file of this example can be found at `Example Code/helloworld.dart` or [here](https://github.com/lywysocki/Dart-CS330/blob/main/helloworld.dart)
   
 #### Comments in Dart
   
@@ -295,6 +296,64 @@ int result = intValue + int.parse(stringValue); // String is coerced to an int
 Within Dart:
 - Identifier names (e.g., variable names, function names, class names) are bound to their types and addresses during the compilation phase
 - Operator symbols (e.g., +, *, ==, etc.) are bound to their operations at compile-time based on the types of operands within an expression
+
+## Loops and Functions
+
+### Loops
+
+#### `while` Loop
+Text about while loops!  
+
+Example:
+```dart
+while(!off()) {
+    doSomething();
+}
+```
+
+#### `do-while` Loop
+Text about do-while!  
+
+Example:
+```dart
+do {
+  printLine();
+} while (!atEndOfPage());
+
+```
+
+#### `for` Loop
+Text about for loops  
+
+Example:
+```dart
+var message = StringBuffer('Dart is fun');
+for (var i = 0; i < 5; i++) {
+  message.write('!');
+}
+```
+#### `for-in` Loop
+For-in Loops  
+
+Example:
+```dart
+for (final candidate in candidates) {
+  candidate.interview();
+}
+```
+
+#### `forEach()` Method
+The forEach() method!!!  
+
+Example:
+```dart
+list.forEach((element) => print(element));
+```
+
+
+### Functions
+
+
 
 ## References
 
