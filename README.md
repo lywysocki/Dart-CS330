@@ -245,11 +245,11 @@ const double pi = 3.14159; // Immutable variable
 <p>&nbsp;</p>
 
 ##### Logical Operators
-| Operator | Meaning   |
-|----------|-----------|
-| &&       | Logical AND     |
-| \|\|     | Logical OR |
-| !*expr*  | Logical NOT|
+| Operator | Meaning     |
+|----------|-------------|
+| &&       | Logical AND |
+| \|\|     | Logical OR  |
+| !*expr*  | Logical NOT |
 <p>&nbsp;</p>
 
 ##### Bitwise Operators
@@ -300,9 +300,9 @@ Within Dart:
 ## Loops and Functions
 
 ### Loops
-
+Dart provides various types of loops to iterate through collections, perform repetitive tasks, or control the flow of one's code. These loops allow one to execute a block of code repeatedly based on a condition or a set number of iterations.
 #### `while` Loop
-Text about while loops!  
+Dart's `while` loop evaluates the condition before the loop, and repeatedly executes a block of code as long as the specified condition remains true.
 
 Example:
 ```dart
@@ -312,7 +312,7 @@ while(!off()) {
 ```
 
 #### `do-while` Loop
-Text about do-while!  
+Dart's `do-while` loop evaluates the condition after the loop, and repeatedly executes a block of code as long as the specified condition remains true. When it comes to `do-while` loops, the code block inside the `do` will always run at least once, regardless of whether the condition is true or false
 
 Example:
 ```dart
@@ -323,37 +323,108 @@ do {
 ```
 
 #### `for` Loop
-Text about for loops  
+The `for` loop is used to execute a block of code repeatedly for a specified number of times or over a range of values. There are three parts within the parentheses: `for (initialization; condition; increment/update)`.
 
 Example:
 ```dart
-var message = StringBuffer('Dart is fun');
-for (var i = 0; i < 5; i++) {
-  message.write('!');
+for (int i = 1; i <= 5; i++) {
+  print('Value of i: $i');
 }
 ```
 #### `for-in` Loop
-For-in Loops  
+A `for-in` loop is designed for iterating over iterable collections like lists, sets, and maps. This type of loop simplifies the process of traversing through all the elements or key-value pairs within a collection.
 
 Example:
 ```dart
-for (final candidate in candidates) {
-  candidate.interview();
+for (var element in collection) {
+  printf('The element: $element');
 }
 ```
 
 #### `forEach()` Method
-The forEach() method!!!  
+The `forEach()` method iterate over elements in a collection like lists, sets, and maps. It's an alternative to using a traditional `for` loop or a `for-in` loop with a simplified syntax. 
 
 Example:
 ```dart
+list.forEach((element){
+  print(element);
+});
+```
+OR
+```dart
 list.forEach((element) => print(element));
 ```
-
+*A file with more loop examples can be found at `Example Code/loops.dart` or [here](https://github.com/lywysocki/Dart-CS330/blob/main/Example%20Code/loops.dart)
 
 ### Functions
 
+#### Declaring Functions
+Within Dart, you can define functions anywhere within your Dart code, and as long as they're in scope when called, they will execute. Functions in Dart can be defined with or without a return type; they can accept multiple parameters--these parameters can be of different data types; and can return only a single value, but you can simulate returning multiple values via collections like lists and maps.
 
+Examples:
+```dart
+// A function without a return type
+void printMessage(String message) {
+  print(message);
+}
+
+// A function with return type 'int'
+int add(int a, int b) {
+  return a + b;
+}
+
+// A function that accepts multiple parameters and
+// different data types
+void aCat(String name, int age, double weight) {
+  print('Name: $name, Age: $age, Height: $weight');
+}
+
+// A function that uses maps to achieve a similar
+// effect of returning multiple values 
+Map<String, dynamic> catInfo() {
+  String name = 'Jake';
+  int age = 13;
+  double weight = 11.7;
+
+  return {
+    'name': name,
+    'age': age,
+    'weight': weight
+  };
+}
+```
+<p>&nbsp;</p>
+
+#### Recursive Functions
+Dart supports recursive functions; you can call a function from within itself. 
+
+Example: 
+```dart
+// A function which recursively calculates the Fibonacci sequence
+int fibonacci(int n) {
+  if (n <= 0) {
+    return 0;
+  } else if (n == 1) {
+    return 1;
+  } else {
+    return fibonacci(n - 1) + fibonacci(n - 2);
+  }
+}
+```
+<p>&nbsp;</p>
+
+#### Pass-by-Value
+Dart uses pass-by-value; this means when a variable is passed to a function in Dart, a copy of the variable's value is passed. For primitive types (e.g., int, double, bool) the actual value is passed, and modifications inside the function do not affect the original variable outside the function. For objects, Dart passes a copy of the reference to the object.  
+<p>&nbsp;</p>
+
+#### Arguments, Parameters, and Local Variables Storage
+| Variable Type         | Storage Location | Explanation                                                                                                                                                   |
+|-----------------------|------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Primitive Types       | Stack            | Values of primitive types (e.g., int, double, bool, etc.) are stored directly on the stack.                                                                   |
+| Objects               | Heap             | Actual objects are allocated in the heap memory.                                                                                                              |
+| References to Objects | Stack            | References to objects (e.g., pointers; instances of classes, lists, maps, etc.) are stored on the stack. The stack holds the memory addresses of the objects. |
+| Function Parameters   | Stack            | Parameters passed to functions are stored on the stack.                                                                                                       |
+| Local Variables       | Stack            | Local variables within functions are stored on the stack.                                                                                                     |
 
 ## References
 
