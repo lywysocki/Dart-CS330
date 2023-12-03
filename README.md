@@ -425,11 +425,53 @@ Dart uses pass-by-value; this means when a variable is passed to a function in D
 | References to Objects | Stack            | References to objects (e.g., pointers; instances of classes, lists, maps, etc.) are stored on the stack. The stack holds the memory addresses of the objects. |
 | Function Parameters   | Stack            | Parameters passed to functions are stored on the stack.                                                                                                       |
 | Local Variables       | Stack            | Local variables within functions are stored on the stack.                                                                                                     |
+<p>&nbsp;</p>
+
+#### Scoping
+Dart is a lexically (statically) scoped language; the scope of variables is determined statically, simply by the layout of the code. Essentially, the variable only has access to a block where it is defined; meaning, you can "follow the curly braces outwards" to see if a variable is in scope.
+
+Loop variables are scoped exclusively to the body of the loop in which they are declared. Whereas, function-scoped variables are accessible throughout the entire function body.
+
+The lifetime of variables declared within a block/function is tied to their scope. Once a block is exited or a function completes execution, local variables in that block or function are removed from memory
+
+Example:
+```dart
+bool topLevel = true;
+
+void main() {
+  var insideMain = true;
+
+  void myFunction() {
+    var insideFunction = true;
+
+    void nestedFunction() {
+      var insideNestedFunction = true;
+
+      assert(topLevel);
+      assert(insideMain);
+      assert(insideFunction);
+      assert(insideNestedFunction);
+    }
+  }
+}
+```
+
+###### Closures
+EXPLAIN CLOSURES AND SCOPING
+
+<p>&nbsp;</p>
+
+#### Side-effects
+
+Within Dart, side-effects are possible: 
 
 ## References
 
 [1] https://dart.dev/ \
 [2] https://en.wikipedia.org/w/index.php?title=Dart_(programming_language)&oldid=1174763841 \
-[3] https://www.jetbrains.com/help/idea/dart.html
+[3] https://www.jetbrains.com/help/idea/dart.html \
+[4] https://www.geeksforgeeks.org/dart-tutorial/?ref=lbp \
+[5] https://yogi-6.medium.com/pure-functions-side-effects-in-dart-functional-programming-part-1-fb931d6c0351 \
+[6]
 
 
