@@ -373,14 +373,12 @@ int add(int a, int b) {
   return a + b;
 }
 
-// A function that accepts multiple parameters and
-// different data types
+// A function that accepts multiple parameters and different data types
 void aCat(String name, int age, double weight) {
   print('Name: $name, Age: $age, Height: $weight');
 }
 
-// A function that uses maps to achieve a similar
-// effect of returning multiple values 
+// A function that uses maps to achieve a similar effect of returning multiple values 
 Map<String, dynamic> catInfo() {
   String name = 'Jake';
   int age = 13;
@@ -410,6 +408,25 @@ int fibonacci(int n) {
     return fibonacci(n - 1) + fibonacci(n - 2);
   }
 }
+```
+<p>&nbsp;</p>
+
+#### Lambda Functions
+
+Lambda functions (a.k.a., arrow functions, or anonymous functions) allows for a shorthand syntax for any function that has only one expression--not a statement. 
+
+Example:
+```dart
+// The basic format of a lambda function
+(returnType parameter) => expression;
+
+// Original Code
+int sum(int a, int b) {
+  return a + b;
+}
+
+// Lambda function
+int sum(int a, int b) => a + b
 ```
 <p>&nbsp;</p>
 
@@ -457,13 +474,28 @@ void main() {
 ```
 
 ###### Closures
-EXPLAIN CLOSURES AND SCOPING
+Within Dart, a  *closure* is a function object that has access to variables in its lexical scope, even if the function is used outside of that scope. 
 
+Example:
+```dart
+void main() {
+  String message = "Hello";
+
+  Function sayHello = () {
+    // This inner function is a closure
+    print(message); // Accessing 'message' from the outer scope
+  };
+
+  sayHello(); // Prints 'Hello' using the closure
+}
+```
 <p>&nbsp;</p>
 
 #### Side-effects
 
-Within Dart, side-effects are possible: 
+Within Dart, side-effects are possible: an operation, function, or expression is said to have a side effect if it modifies state outside its scope (e.g., it modifies some state variable value(s) outside its local environment, modifies objects passed by reference, or performs I/O operations, etc). Since Dart allows for mutable variables and objects, there aren't any inherent guard rails against side-effects. Conversely, Dart's stong typying and immutability option promotes avoiding unintentional side-effects.
+
+*A file with more function examples can be found at `Example Code/functions.dart` or [here](https://github.com/lywysocki/Dart-CS330/blob/main/Example%20Code/functions.dart)
 
 ## References
 
@@ -472,6 +504,7 @@ Within Dart, side-effects are possible:
 [3] https://www.jetbrains.com/help/idea/dart.html \
 [4] https://www.geeksforgeeks.org/dart-tutorial/?ref=lbp \
 [5] https://yogi-6.medium.com/pure-functions-side-effects-in-dart-functional-programming-part-1-fb931d6c0351 \
-[6]
+[6] https://codewithandrea.com/articles/side-effects-flutter/ \
+[7]
 
 
