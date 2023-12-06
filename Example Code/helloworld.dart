@@ -1,5 +1,5 @@
-/*
-A Hello World program, written in Dart
+/**
+ * A Hello World program, written in Dart
  */
 void main() {
   // Prints "Hello World!" to the console
