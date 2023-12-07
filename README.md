@@ -64,19 +64,41 @@ Example:
 ```dart
 void main() {
   // TODO: Print "Hello World!"
-  print('Hello World!');
 }
 ```
   
 ##### Multi-line comments
 Mult-line comments in Dart begin with `/*` and end with `*/`  
+
+```dart
+void main() {
+  /*
+  Need to create "Hello World!" output
   
+  Similar to this:
+  Print("Hello World!");
+   */
+}
+```
+
+##### Documentation comments
+Documentation comments in Dart are multi-line or single-line comments that begin `///` or begin with `/*` and end with `*/`.  
+
 Example:
 ```dart
-/*
+/// A simple "Hello World!" function
+/// 
+/// Prints to the console
+void main() {
+  print('Hello World!');
+}
+```
+OR
+```dart
+/**
  * A program that displays "Hello World!" to the console
- @retuns void
-*/
+ * @retuns void
+ */
 void main() {
   print('Hello World!');
 }
@@ -292,11 +314,203 @@ String stringValue = '3';
 
 int result = intValue + int.parse(stringValue); // String is coerced to an int
 ```
+# //TODO: FINISH THIS:
 ### Addresses and Bindings
 Within Dart:
 - Identifier names (e.g., variable names, function names, class names) are bound to their types and addresses during the compilation phase
 - Operator symbols (e.g., +, *, ==, etc.) are bound to their operations at compile-time based on the types of operands within an expression
 
+## Selection Control Structures
+
+### Boolean Values
+Within Dart, there are two boolean values: `true` and `false`.
+
+### Conditional Statements
+Dart's conditional statements are delimited using curly braces `{}`. These curly braces `{}` define the scope of the code-block associated with each condition. Additionally, because of the use of curly braced `{}` for scope, Dart avoids the "dangling `else`" issue. Also, Dart's language specifications dictate that the `else` clause is associated with the nearest `if`.
+
+#### `if` Statement
+Dart's `if` statement is a conditional statement which executes a block of code if a specified condition between the parentheses after `if` is evaluated to be `true`. Within Dart, the `else` statement after an `if` statement is optional and can be omitted if there's no need to execute an alternative block of code when the condition in the `if` statement evaluates to `false`.
+
+Example:
+```dart
+// Syntax format
+if (condition) {
+  // Code-block to be executed if the condition is 'true'
+}
+  
+// Example `if` Statement
+void main() {
+  int num = 7;
+  
+  if (num > 3) {
+    print("We Love Dart!")
+  }
+}
+```
+Output:
+```dart
+We Love Dart!
+```
+
+#### `if...else` Statement
+Within Dart, the `if-else` statement extends the `if` statement by providing an alternative code-block to execute when the condition evaluates to `false`.
+
+Example:
+```dart
+// Syntax format
+if (condition) {
+  // Code-block to be executed if the condition is 'true'
+} else {
+  // Code-block to be executed if the condition is 'false'
+}
+
+// Example `if-else` Statement
+void main() {
+  int num = 0;
+  
+  if (num > 3) {
+    print("We Love Dart!")
+  } else {
+    print("We Still Love Dart!")
+  }
+}
+```
+Output:
+```
+We Still Love Dart!
+```
+
+###### Conditional expressions
+Within Dart, there exists conditional expressions, a compact way to write conditional statements.  
+
+**Ternary Operator:**
+* `condition ? expression1 : expression2;`
+* If `condition` is `true`, `expression1` is evaluated and becomes the result of the expression.
+* If `condition` is `false`, `expression2` is evaluated and becomes the result of the expression.  
+
+Example:
+```dart
+void main() {
+  int num = 7;
+  
+  String message = num > 5 ? 'num is greater than 5' : 'num is not greater than 5';
+  
+  print(message); // Output will be "num is greater than 5"
+}
+```
+
+**Null-aware Operator:**
+* `expression1 ?? expression2;`
+* If `expression1` evaluates to a non-null value, the result of the expression will be `expression1`.
+* If `expression1` evaluates to `null`, the result will be `expression2`.  
+
+Example:
+```dart
+void main() {
+  int num1;
+  int num2 = 7;
+  
+  int result = num1 ?? num2; // If num1 is null, assign the value of num2 to result
+
+  print(result); // Output will be 10 (b/c num1 is null)
+}
+```
+
+**Null-aware Assignment Operator**
+* `variable ??= value;`
+* If `variable` is `null`, it assigns `value` to `variable`.  
+* If `variable` is already holding a non-null value, the assignment doesn’t happen, and `variable` retains its current value.  
+
+Example:
+```dart
+void main() {
+  int num1;
+  int num2 = 7;
+
+  num1 ??= num2; // If num1 is null, assign the value of num2 to num1
+
+  print(num1); // Output will be 10 (b/c num1 is null and num2 is assigned to num1)
+}
+```  
+
+#### `else if` Statement
+The `else if` statement allows for an additional condition to check when the initial `if` condition evaluates to `false`. Adding more and more `else if ` statements allows you to check multiple conditions sequentially.
+
+Example:
+```dart
+//Synax format
+if (condition) {
+  // Code-block to be executed if the condition is 'true'
+} else if (condition2) {
+  // Code-block to be executed if the condition is 'false' and condition2 is `true`
+} else {
+// Code-block to be executed if the condition and condition2 are 'false'
+}
+
+// Example `if/else if/else' statement
+void main() {
+  int num = 7;
+  
+  if (num > 10) {
+    print("I Love Dart!");
+  } else if (num > 8) {
+    print("We Love Dart!");
+  } else if (num > 4) {
+    print("Who Doesn't Love Dart?");
+  } else {
+    print("You Love Dart!");
+  }
+}
+```
+Output:
+```
+Who Doesn't Love Dart?
+```
+
+#### `switch` Statement
+With a `switch` statement, you are able to evaluate a value expression against a series of cases.
+Switch cases are useful in scenarios that involve a single variable or expression that needs to be evaulated against multiple possible values and execute different code-blocks based on those value.
+
+When the value of the expression matches a case’s value, the case's code-block executes. Non-empty case clauses jump to the end of the switch after completion; they don't require a `break` statement. Other valid ways to end a non-empty case clause are a `continue`, `throw`, or `return` statement:
+- `continue` skips the remaining code within that specific case and continues with the next iteration or case if present
+- `throw` throws an exception, immediately exiting the switch block and possibly the enclosing function/method
+- `return` causes the function/method containing the `switch` statement to exit and return the specified value
+
+Example:
+```dart
+//Syntax format
+switch (expression) {
+    case value1:
+      // Code to execute if expression equals value1
+      break;
+    case value2:
+      // Code to execute if expression equals value2
+      break;
+    // Additional cases...
+    default:
+      // Code to execute if expression doesn't match any case
+}
+
+// Switch statement example
+void main() {
+    int num = 7;
+    
+    switch (num) {
+      case 1:
+        print('one');
+        break;
+      case 2:
+        print('two');
+        break;
+      default:
+        print ('other number');
+    }
+}
+```
+Output:
+```
+other number
+```
 ## Loops and Functions
 
 ### Loops
@@ -505,6 +719,6 @@ Within Dart, side-effects are possible: an operation, function, or expression is
 [4] https://www.geeksforgeeks.org/dart-tutorial/?ref=lbp \
 [5] https://yogi-6.medium.com/pure-functions-side-effects-in-dart-functional-programming-part-1-fb931d6c0351 \
 [6] https://codewithandrea.com/articles/side-effects-flutter/ \
-[7]
-
+[7] https://www.geeksforgeeks.org/dart-programming-if-else-statement-if-if-else-nested-if-if-else-if/ \
+[8] 
 
