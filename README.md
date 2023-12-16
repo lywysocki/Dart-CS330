@@ -314,11 +314,14 @@ String stringValue = '3';
 
 int result = intValue + int.parse(stringValue); // String is coerced to an int
 ```
-# //TODO: FINISH THIS:
+
 ### Addresses and Bindings
+
 Within Dart:
 - Identifier names (e.g., variable names, function names, class names) are bound to their types and addresses during the compilation phase
 - Operator symbols (e.g., +, *, ==, etc.) are bound to their operations at compile-time based on the types of operands within an expression
+- Garbage collection is utilized, so memory is automatically allocated and deallocated by the Dart runtime
+- Developers don't need to manage memory manually, as the system handles memory allocation and releases unused memory when objects are no longer referenced
 
 ## Selection Control Structures
 
@@ -511,6 +514,34 @@ Output:
 ```
 other number
 ```
+#### Short-Circuit Logic  
+
+- Look [here](https://github.com/lywysocki/Dart-CS330/blob/main/README.md#logical-operators) for Dart's logical operators  
+
+Like many other languages, Dart utalizes short-circuit evaluation; essentially, evalutation of an expression is stopped as soon as the result can be determined.
+
+###### Short-Circuit AND (`&&`) Operator
+The `&&` operator returns true if both operands are true. If the left operand of `&&` is `false`, the right operand is not evaluated because the overall result will be `false` regardless of the right operand's value. If the left operand is `true`, then the right operand is evaluated.
+
+Example:
+```dart
+bool a = false;
+bool b = true;
+bool result = a && b; // 'b' isn't evaluated b/c 'a' is false
+```
+
+###### Short-Circuit OR (`||`) Operator:
+The `||` operator returns true if at least one operand is true. If the left operand of `||` is `true`, the right operand is not evaluated because the overall result will be `true` regardless of the right operand's value. If the left operand is `false`, then the right operand is evaluated.
+
+Example:
+```dart
+bool x = true;
+bool y = false;
+bool result = x || y; // 'y' isn't evaluated b/c 'x' is true
+```
+
+A file with more control statement examples can be found at `Example Code/control_statements.dart` or [here](https://github.com/lywysocki/Dart-CS330/blob/main/Example%20Code/control_statements.dart)
+
 ## Loops and Functions
 
 ### Loops
