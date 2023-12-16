@@ -742,6 +742,82 @@ Within Dart, side-effects are possible: an operation, function, or expression is
 
 *A file with more function examples can be found at `Example Code/functions.dart` or [here](https://github.com/lywysocki/Dart-CS330/blob/main/Example%20Code/functions.dart)
 
+## Classes and Inheritance
+A simple example of a Dart object-oriented program can be found [here](https://github.com/lywysocki/Dart-CS330/blob/main/Example%20Code/object_oriented.dart).
+### Objects
+Dart supports objects and object-oriented programming concepts. Objects, within Dart, allow for defining classes to create objects with attributes (instance variables) and methods (functions). Information on naming conventions for objects, instance variables, or functions can be found [here](https://github.com/lywysocki/Dart-CS330/tree/main?tab=readme-ov-file#naming-conventions).
+### Standard Methods
+Dart provides standard methods that serve similar purposes across all objects. These standard method can be overridden in classes to define specific behaviors for objects.
+#### `toString()`
+**Purpose:** Returns a string representation of the object.  
+**Usage:** Override this method to make a customized string representation of the object.
+
+Example:
+```dart
+class Person {
+  String name;
+  int age;
+
+  Person(this.name, this.age);
+
+  @override
+  String toString() {
+    return 'Person: name = $name, age = $age';
+  }
+}
+
+void main() {
+  var person = Person('Alice', 30);
+  print(person); // Output: 'Person: name = Alice, age = 30'
+}
+```
+### Inheritance
+Within Dart, there is a concept called inheritance, which allows one class to inherit properties and behavior from another class. Dart only allows for single inheritance, meaning a class can only inherit from one superclass. However, Dart offers mixins and interfaces to achieve similar functionality to multiple inheritance. Mixins within Dart allows for the reuse of methods and properties across multiple class hierarchies. They allow you to add functionality to a class without using inheritance.
+
+Also, it is important to mention Dart doesn't allow you to have multiple methods with the same name and different parameters within the same class; method overloading isn't allowed.
+
+Inheritance Exmaple:
+```dart
+class Animal {
+  void makeSound() {
+    print('Some sound');
+  }
+}
+
+class Cat extends Animal {
+  void meow() {
+    print('Meow!');
+  }
+
+class Dog extends Animal {
+  void bark() {
+    print('Woof!');
+  }
+}
+```
+
+Mixins Example:
+```dart
+mixin Swimmer {
+  void swim() {
+    print('Swimming...');
+  }
+}
+
+// Duck class using the swimmer mixin
+class Duck with Swimmer {
+  void quack() {
+    print('Quack!');
+  }
+}
+
+void main() {
+  var duck = Duck();
+  duck.quack(); // Output: Quack!
+  duck.swim();  // Output: Swimming...
+}
+```
+
 ## References
 
 [1] https://dart.dev/ \
@@ -751,5 +827,4 @@ Within Dart, side-effects are possible: an operation, function, or expression is
 [5] https://yogi-6.medium.com/pure-functions-side-effects-in-dart-functional-programming-part-1-fb931d6c0351 \
 [6] https://codewithandrea.com/articles/side-effects-flutter/ \
 [7] https://www.geeksforgeeks.org/dart-programming-if-else-statement-if-if-else-nested-if-if-else-if/ \
-[8] 
-
+[8] https://www.javatpoint.com/dart-object-oriented-concepts#:~:text=Dart%20is%20an%20object%2Doriented,are%20the%20real%2Dlife%20entities
